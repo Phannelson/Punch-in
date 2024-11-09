@@ -1,0 +1,12 @@
+.button-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.button-section button {
+    padding: 10px 20px;
+    font-size: 1.25rem;
+}
