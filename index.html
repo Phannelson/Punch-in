@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Punch in time</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!--Display date above the button-->
+    <div class="date-display" id = "current-date">Loading date</div>
+
+    <div class="centered-button">
+        <button id="punch-in-btn" class="btn btn-custom">Punch In</button>
+    </div>
+    
+    <div id="pin-pad-container" class="pin-pad-container" style="display: none;">
+        <div class="pin-pad">
+            <div class="pin-display" id="pin-display">Enter PIN</div>
+            <div class="pin-buttons">
+                <button class="pin-btn" onclick="enterPin(1)">1</button>
+                <button class="pin-btn" onclick="enterPin(2)">2</button>
+                <button class="pin-btn" onclick="enterPin(3)">3</button>
+                <button class="pin-btn" onclick="enterPin(4)">4</button>
+                <button class="pin-btn" onclick="enterPin(5)">5</button>
+                <button class="pin-btn" onclick="enterPin(6)">6</button>
+                <button class="pin-btn" onclick="enterPin(7)">7</button>
+                <button class="pin-btn" onclick="enterPin(8)">8</button>
+                <button class="pin-btn" onclick="enterPin(9)">9</button>
+                <button class="pin-btn" onclick="clearPin()">C</button>
+                <button class="pin-btn" onclick="enterPin(0)">0</button>
+                <button class="pin-btn" onclick="submitPin()">OK</button>
+            </div>
+            <button class="btn-exit" onclick="exitPinPad()">Exit</button>
+        </div>
+    </div>
+    
+
+    <script src="js/script.js"></script>
+</body>
+</html>
