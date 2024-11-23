@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Punch in time</title>
-    <!-- Link to external CSS file -->
-    <link rel="stylesheet" href="css/styles.css">
+    <!-- Load the static files -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'punch_in_app/css/styles.css' %}">
 </head>
 <body>
-    <!--Display date above the button-->
-    <div class="date-display" id = "current-date">Loading date</div>
+    <!-- Display date above the button -->
+    <div class="date-display" id="current-date">Loading date</div>
 
     <div class="centered-button">
         <button id="punch-in-btn" class="btn btn-custom">Punch In</button>
     </div>
-    
+
     <div id="pin-pad-container" class="pin-pad-container" style="display: none;">
         <div class="pin-pad">
             <div class="pin-display" id="pin-display">Enter PIN</div>
@@ -35,8 +36,7 @@
             <button class="btn-exit" onclick="exitPinPad()">Exit</button>
         </div>
     </div>
-    
 
-    <script src="js/script.js"></script>
+    <script src="{% static 'punch_in_app/js/script.js' %}"></script>
 </body>
 </html>
