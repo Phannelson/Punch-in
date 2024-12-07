@@ -18,16 +18,17 @@ class Employee(models.Model):
 
 # PunchRecord Model
 class PunchRecord(models.Model):
-    punch_id = models.AutoField(primary_key=True)
+    punch_id = models.CharField(max_length=50, primary_key=True)
     employee = models.ForeignKey(Employee, on_delete=models.CASCADE)
-    week_id = models.CharField(max_length=50)  # Assuming week_id is stored as a VARCHAR in the database
-    date = models.DateField()
+    week_id = models.CharField(max_length=50)
+    record_date = models.DateField()
     punch_in_time = models.TimeField(null=True, blank=True)
     punch_out_time = models.TimeField(null=True, blank=True)
     break_start_time = models.TimeField(null=True, blank=True)
     break_end_time = models.TimeField(null=True, blank=True)
-    receipt_uploaded = models.BooleanField(default=False)
-    notes = models.TextField(null=True, blank=True)
+
+    class Meta:
+        db_table = 'PunchRecord'
 
     def __str__(self):
         return f"PunchRecord {self.punch_id} for Employee {self.employee.first_name} {self.employee.last_name}"

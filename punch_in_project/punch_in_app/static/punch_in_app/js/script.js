@@ -47,6 +47,14 @@ function exitPinPad() {
     document.getElementById("pin-pad-container").style.display = "none";
 }
 
+let punchInTime;
+
+document.getElementById("punch-in-btn").addEventListener("click", function() {
+    console.log("Punch In button clicked");
+    punchInTime = new Date();
+    document.getElementById("pin-pad-container").style.display = "block";
+});
+
 function submitPin() {
     console.log("Submit PIN function called");
     console.log("Entered PIN:", pin);
